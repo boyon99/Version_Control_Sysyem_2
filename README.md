@@ -76,6 +76,7 @@ $ git config --global core.pager "cat"
   - `git log --oneline` : 커밋에 관한 내용을 간략하게 확인할 수 있다.
   - `git log --oneline --branches` : 브랜치 정보를 같이 확인할 수 있다.
   - `git log --oneline --branches --graph` : 그래프 형태로 브랜치와 커밋의 관계를 더 쉽게 확인할 수 있다.
+  - `git log [브랜치명]..[브랜치명]` : 두 브랜치의 차이를 알 수 있다.
 - `git diff` : 변경 사항을 확인할 수 있다.
 
 ### tracked 파일과 untracked 파일
@@ -95,7 +96,7 @@ $ git config --global core.pager "cat"
 - 1. `git branch` : 브랜치를 확인할 수 있다.
 - 2. `git branch [브랜치명]` : 브랜치를 생성한다.
 - 3. `git checkout [브랜치명]` : 해당 브랜치로 이동한다.
-
+- 4. `git merge [브랜치명]` : 
 
 
 ### remote
