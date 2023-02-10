@@ -96,7 +96,10 @@ $ git config --global core.pager "cat"
 - 1. `git branch` : 브랜치를 확인할 수 있다.
 - 2. `git branch [브랜치명]` : 브랜치를 생성한다.
 - 3. `git checkout [브랜치명]` : 해당 브랜치로 이동한다.
-- 4. `git merge [브랜치명]` : 
+- 4. `git merge [브랜치명]` : 현재 checkout되어 있는 브랜치에 해당 브랜치를 병합한다.
+- 5. `git branch -d [브랜치명]` : 
+
+### 충돌
 
 
 ### remote
