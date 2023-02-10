@@ -65,10 +65,10 @@ $ git config --global core.pager "cat"
 ### 버전 만들기
 [](./version.png)
 
-- 1. `git add [파일명]` : 파일이 스테이징된다.
+1. `git add [파일명]` : 파일이 스테이징된다.
   - `git add .` : 변경된 모든 스테이징한다.
-- 2. `git commit` : 파일이 local repo로 넘어간다. `git commit -m “[커밋메세지]”`으로 단축해서 사용할 수 있다.
-- 3. `git push` : remote repo로 파일을 올린다. `git push [저장소명] [브랜치명]`을 통해 저장소와 브랜치를 설정할 수 있다.
+2. `git commit` : 파일이 local repo로 넘어간다. `git commit -m “[커밋메세지]”`으로 단축해서 사용할 수 있다.
+3. `git push` : remote repo로 파일을 올린다. `git push [저장소이름] [브랜치명]`을 통해 저장소와 브랜치를 설정할 수 있다.
 
 - `git status` : 현재의 깃 상태를 확인할 수 있다.
 - `git log` : 저장소에 저장된 버전을 확인할 수 있다.
@@ -81,6 +81,8 @@ $ git config --global core.pager "cat"
 
 ### tracked 파일과 untracked 파일
 - tracked : 한 번이라도 커밋한 파일의 경우 수정 시 내용을 바로 추적한다.
+   - `git stash` : 수정중인 파일 감추기
+   - `git stash pop` : 감춘 파일 원상복귀하기
 - untracked : 한 번도 깃에서 버전 관리를 하지 않았기 때문에 수정 내역을 추적하지 않는다.
 
 ### 취소하기
@@ -93,13 +95,15 @@ $ git config --global core.pager "cat"
 
 
 ### 브랜치란?
-- 1. `git branch` : 브랜치를 확인할 수 있다.
-- 2. `git branch [브랜치명]` : 브랜치를 생성한다.
-- 3. `git checkout [브랜치명]` : 해당 브랜치로 이동한다.
-- 4. `git merge [브랜치명]` : 현재 checkout되어 있는 브랜치에 해당 브랜치를 병합한다.
-- 5. `git branch -d [브랜치명]` : 
+1. `git branch` : 브랜치를 확인할 수 있다.
+2. `git branch [브랜치명]` : 브랜치를 생성한다.
+3. `git checkout [브랜치명] || git switch [브랜치명]` : 해당 브랜치로 이동한다.
+4. `git merge [브랜치명]` : 현재 checkout되어 있는 브랜치에 해당 브랜치를 병합한다.
+5. `git branch -d [브랜치명]` : 저장소에서 브랜치를 삭제하는 것이 아니라 로컬에서 해당 브랜치 내역을 삭제한다.
 
 ### 충돌
 
 
 ### remote
+생성한 지역저장소를 원격 저장소와 연결하기
+1. `git remote add [저장소이름] [깃허브주소]` : 연결할 깃허브 주소와 저장소 이름을 설정한다.
