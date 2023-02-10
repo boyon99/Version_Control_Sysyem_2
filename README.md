@@ -63,5 +63,39 @@ $ git config --global core.pager "cat"
 - 생성한 레포지토리 주소 가져오기 `git clone [repo addr] && cd [repo addr]`
 
 ### 버전 만들기
+[](./version.png)
+
+- 1. `git add [파일명]` : 파일이 스테이징된다.
+  - `git add .` : 변경된 모든 스테이징한다.
+- 2. `git commit` : 파일이 local repo로 넘어간다. `git commit -m “[커밋메세지]”`으로 단축해서 사용할 수 있다.
+- 3. `git push` : remote repo로 파일을 올린다. `git push [저장소명] [브랜치명]`을 통해 저장소와 브랜치를 설정할 수 있다.
+
+- `git status` : 현재의 깃 상태를 확인할 수 있다.
+- `git log` : 저장소에 저장된 버전을 확인할 수 있다.
+  - `git log --stat` : 커밋에 관한 파일까지 함께 확인할 수 있다.
+  - `git log --oneline` : 커밋에 관한 내용을 간략하게 확인할 수 있다.
+  - `git log --oneline --branches` : 브랜치 정보를 같이 확인할 수 있다.
+  - `git log --oneline --branches --graph` : 그래프 형태로 브랜치와 커밋의 관계를 더 쉽게 확인할 수 있다.
+- `git diff` : 변경 사항을 확인할 수 있다.
+
+### tracked 파일과 untracked 파일
+- tracked : 한 번이라도 커밋한 파일의 경우 수정 시 내용을 바로 추적한다.
+- untracked : 한 번도 깃에서 버전 관리를 하지 않았기 때문에 수정 내역을 추적하지 않는다.
+
+### 취소하기
+- `git checkout -- "file name"` : 수정한 내용을 취소한다. (tracked된 파일 중 수정하고 있는 사항을 취소한다.)
+- `git reset HEAD "file name"` : 스테이징 되어 있는 내용을 취소한다.
+- `git reest HEAD^` : 가장 마지막에 한 커밋을 취소한다.
+  - `git reset --hard "복사한 커밋해시"` : `git log`를 통해 이동할 커밋해시를 선택한 후 명령어를 입력하면 해당 커밋이 가장 최신 커밋으로 변경된다.
+- `git revert "복사한 커밋해시"` : 커밋을 되돌리되 삭제하지 않고 보관한다.
 
 
+
+### 브랜치란?
+- 1. `git branch` : 브랜치를 확인할 수 있다.
+- 2. `git branch [브랜치명]` : 브랜치를 생성한다.
+- 3. `git checkout [브랜치명]` : 해당 브랜치로 이동한다.
+
+
+
+### remote
